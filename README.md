@@ -10,6 +10,9 @@ The project utilizes Formula 1 racing data obtained from the Ergest Developer AP
 https://ergast.com/mrd/db/#csv
 
 
+![image](https://github.com/psundari/spark_learning/assets/112127625/d44ec791-9efe-489b-945c-41265a91175d)
+
+
 ## Project Resources :
 
 1. **Azure Data Lake Gen2**: Used for hierarchical storage.
@@ -30,6 +33,7 @@ https://ergast.com/mrd/db/#csv
 7.	After that create a scope for the databricks to link it with the azure key vault.
 8.	Create a new notebook in databricks in set-up folder **mount_adls_storage**. This contains the code to coonect to the datalake storage using service principal accessing secrets through azure key vault. Now mount all 3 containers onto databricks in the location **‘mnt/formula1dldatastorage’**
 
+<img width="942" alt="image" src="https://github.com/psundari/spark_learning/assets/112127625/8c0779f1-6572-453d-bcc0-92b71368dedb">
 
 
 #### Ingestion of raw files:
