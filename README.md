@@ -9,6 +9,7 @@ The project utilizes Formula 1 racing data obtained from the Ergest Developer AP
 
 https://ergast.com/mrd/db/#csv
 
+Here is the ER diagram of dataset:
 
 ![image](https://github.com/psundari/spark_learning/assets/112127625/d44ec791-9efe-489b-945c-41265a91175d)
 
@@ -42,6 +43,9 @@ https://ergast.com/mrd/db/#csv
 2. Performed common operations like defining schema, selecting columns, and adding ingestion date
 3. Run all the 8 files using a single file **ingest_all_file** which contains run commands of all 8 based on the sucess of previous one which produce processed data stored in the processed container as parquet format.
 
+<img width="398" alt="image" src="https://github.com/psundari/spark_learning/assets/112127625/e6eaa562-6072-4ea2-876d-7353f5be22cf">
+
+
 #### Transformations of Processed Files:
 
 Implemented 3 notebooks for transforming processed files:
@@ -51,9 +55,15 @@ Implemented 3 notebooks for transforming processed files:
 4. First run race_results notebook which produce tarnsmored data which is saved in presentation container in parquet format with name **race_results**. 
 5. Driver_standings and constructor_standings use race_results data from presentation container.
 
+   <img width="396" alt="image" src="https://github.com/psundari/spark_learning/assets/112127625/dacfdecb-4c7a-4a84-b6d3-dcf51ea98001">
+
+
 #### Vizualization:
 1.	Once data is available in the presentation container, we created f1_presentation database and top of that created 3 tables namely **race_results,driver_standings** and **constructor_standings**.
 2.	Then we imported these tables into power BI connecting through databricks using url and access token which lists all the available databases and schemas, then we load race_results data and start creating reports
+
+   <img width="635" alt="image" src="https://github.com/psundari/spark_learning/assets/112127625/b8ad25ea-cfed-4664-9308-09ccebd52ff7">
+
 
 #### Integration & Automation:
 
@@ -63,6 +73,9 @@ Implemented 3 notebooks for transforming processed files:
 - **Transformation Pipeline**: Runs after successful completion of ingestion, transforming parquet files.
 - **Process Pipeline**: Master pipeline orchestrating ingestion and transformation pipelines.
 - **Azure Trigger**: Scheduled to run on every Sunday at 10 PM, triggering the process pipeline to ingest and transform data.
+
+  ![image](https://github.com/psundari/spark_learning/assets/112127625/09330215-cb3a-4309-8a4f-cdaf588e3197)
+
 
 
 
