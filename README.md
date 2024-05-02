@@ -14,7 +14,8 @@ Here is the ER diagram of dataset:
 ![image](https://github.com/psundari/spark_learning/assets/112127625/d44ec791-9efe-489b-945c-41265a91175d)
 
 ## Architecture:
-     ![image](https://github.com/psundari/Formula-racing-project/assets/112127625/703df499-1144-4996-8400-33f03bb6d453)
+ ![image](https://github.com/psundari/Formula-racing-project/assets/112127625/ed145e12-7ade-47c8-aa6c-dcacb1d47e0f)
+
 
 ## Project Resources :
 
