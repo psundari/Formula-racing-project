@@ -13,6 +13,8 @@ Here is the ER diagram of dataset:
 
 ![image](https://github.com/psundari/spark_learning/assets/112127625/d44ec791-9efe-489b-945c-41265a91175d)
 
+## Architecture:
+     ![image](https://github.com/psundari/Formula-racing-project/assets/112127625/703df499-1144-4996-8400-33f03bb6d453)
 
 ## Project Resources :
 
@@ -38,9 +40,11 @@ Here is the ER diagram of dataset:
 
 6.	Create a Azure key vault service named **‘formula1-kv-keys’** and create 3 secrets i.e clientid, tenanted, clientsecret taken from azure service principal.
 7.	After that create a scope for the databricks to link it with the azure key vault.
-8.	Create a new notebook in databricks in set-up folder **mount_adls_storage**. This contains the code to coonect to the datalake storage using service principal accessing secrets through azure key vault. Now mount all 3 containers onto databricks in the location **‘mnt/formula1dldatastorage’**
+8.	Place all the provided code files in the databricks workspace.**mount_adls_storage** in set-up folder contains the code to coonect to the datalake storage using service principal accessing secrets through azure key vault which mount all 3 containers onto databricks in the location **‘mnt/formula1dldatastorage’**
 
 <img width="942" alt="image" src="https://github.com/psundari/spark_learning/assets/112127625/8c0779f1-6572-453d-bcc0-92b71368dedb">
+
+9. Once data lake storage is mounted on the databricks, start with ingestion data by running **ingest_all_file** and then go for transformations of the data which produce data for processed and presentation container. Following is the functionality implemented.
 
 
 #### Ingestion of raw files:
@@ -65,8 +69,9 @@ Implemented 3 notebooks for transforming processed files:
 
 
 #### Vizualization:
-1.	Once data is available in the presentation container, we created f1_presentation database and top of that created 3 tables namely **race_results,driver_standings** and **constructor_standings**.
-2.	Then we imported these tables into power BI connecting through databricks using url and access token which lists all the available databases and schemas, then we load race_results data and start creating reports
+1.	Once data is available in the presentation container, we created f1_presentation database and top of that created 3 tables namely **race_results,driver_standings** and **constructor_standings** which is present in **presentation_tables.sql** file.
+2.	And created two more sql files **Find_dominant_drivers.sql,Find_dominant_teams.sql** which contains the sql code to find the rankings of drivers and teams for each race year respectively.
+3.	Then we imported these tables into power BI connecting through databricks using url and access token which lists all the available databases and schemas, then we load race_results data and start creating reports
 
    <img width="635" alt="image" src="https://github.com/psundari/spark_learning/assets/112127625/b8ad25ea-cfed-4664-9308-09ccebd52ff7">
 
