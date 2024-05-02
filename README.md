@@ -83,6 +83,7 @@ Implemented 3 notebooks for transforming processed files:
   ![image](https://github.com/psundari/spark_learning/assets/112127625/09330215-cb3a-4309-8a4f-cdaf588e3197)
 
   ## Evaluation:
+  we evaluate the project based on following criteria.
   1. Insights Generated
      - Driver Rankings
      - Constructor Rankings
